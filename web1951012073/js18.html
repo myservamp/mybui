@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 18</title>
+	<style>
+		#image{
+			height: 500px;
+			width: 700px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Image Resizing</h2>
+	<hr>
+	<span>
+		Scale: 
+		<input type="radio" id="size" name="size" onClick="Scale(0.1)">10%
+		<input type="radio" id="size" name="size" onClick="Scale(0.25)">25%
+		<input type="radio" id="size" name="size" onClick="Scale(0.5)">50%
+		<input type="radio" id="size" name="size" onClick="Scale(1)" checked>100%
+	</span>
+	<br>
+	<img src="Images/sunset.jpg" id="image">
+	<script>
+		var image = document.getElementById('image')
+		const h = image.height
+		const w = image.width
+		function Scale(n){
+			image.style.height = h*n + 'px'
+			image.style.width = w*n + 'px'
+		}
+	</script>
+</body>
+</html>

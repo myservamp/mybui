@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 04</title>
+<style>
+	p{
+		text-align: center;
+		font-size: 5em;
+		font-weight: 700;
+	}
+</style>
+<script>
+	function xoay()
+	{
+		var str1 =  document.getElementById("left").innerHTML;
+		str1 = str1.substr(1) + str1.substr(0,1);
+		document.getElementById("left").innerHTML = str1;
+		var str2 =  document.getElementById("right").innerHTML;
+		str2 = str2.substr(str1.length-1) + str1.substr(0,str1.length-1);
+		document.getElementById("right").innerHTML = str2;
+	}
+</script>
+</head>
+
+<body>
+	<p id="left">HTML - JAVASCRIPT</p>
+	<p id="right">HTML - JAVASCRIPT</p>
+</body>
+	<script>
+		setInterval(xoay, 500);
+	</script>
+</html>

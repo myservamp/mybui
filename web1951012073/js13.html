@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 13</title>
+	<script>
+		function Sta()
+		{
+			var s1 = document.getElementById("a").value;
+			var arr = s1.split(" ");
+			var i, words = 0;
+			var arrkq = [];
+			for(i = 0; i < arr.length; i++)
+				{
+					if(arr[i].trim() != " ")
+						words++;
+				}
+			var kq = "Characters: "+s1.length+"<br>" + "Words: "+ words +"<br>";
+			for(i = 0; i < s1.length; i++)
+			{
+				if(s1.charCodeAt(i) >= 97 && s1.charCodeAt(i) <= 122 )
+				{
+					if(!isNaN(arrkq[s1.charCodeAt(i)-32]))
+						arrkq[s1.charCodeAt(i)-32]++;
+					else
+						arrkq[s1.charCodeAt(i)-32]=1;
+				}
+				else
+				{
+					if(!isNaN(arrkq[s1.charCodeAt(i)]))
+						arrkq[s1.charCodeAt(i)]++;
+					else
+						arrkq[s1.charCodeAt(i)]=1;
+				}
+				
+			}
+			for(i = 0; i < arrkq.length; i++)
+			{
+				if(!isNaN(arrkq[i]))
+					kq += "Characters' "+String.fromCharCode(i)+" ': "+arrkq[i]+"<br>";
+			}
+			document.getElementById("xuat").innerHTML = kq;
+		}
+	</script>
+</head>
+
+<body>
+	<table>
+		<caption><h2>String Statistic</h2></caption>
+		<tr>
+			<td>String: </td>
+			<td><input type="text" id="a" size="50" value="Hello, how are you? 1123425"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<button onClick="Sta()">Statistic</button>
+			</td>
+		</tr>
+	</table>
+	<div id="xuat"></div>
+	
+</body>
+</html>

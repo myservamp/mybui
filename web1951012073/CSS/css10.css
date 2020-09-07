@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1{
+	margin-bottom: 10px;
+	color: green;
+	height: 60px;
+	font-size: 3em;
+}
+.nar{
+	overflow: hidden;
+	background-color: #0870A3;
+}
+
+#menu{margin-top: 2px; color: white;}
+#menu li{
+	list-style-type: none;
+	display: inline-block;
+	height: 25px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#menu li:hover{background-color: aqua;}
+a:link{color: white; text-decoration: none;}
+a:link:hover{
+	color: red;
+	background-color: aqua;
+	text-decoration: underline;
+}
+a:visit{color: wheat; text-decoration: none;}
+#li1{color: yellow; text-shadow: 3px 3px black;}
+#li5{
+	float:right;
+}
+#dk{color: green;}
+#ndk{background-color: #0870A3; color: white;}

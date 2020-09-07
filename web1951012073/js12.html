@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JS 12</title>
+</head>
+<body>
+ <table>
+    <caption>
+     <h2>XỬ LÝ CHUỖI</h2>
+    </caption>
+    <tr>
+      <td>Chuỗi ban đầu:</td>
+      <td>
+        <input type="text" id="cbd">
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button onclick="DaoChuoi()">Đảo chuỗi</button>
+        <button onclick="ChuanHoa()">Chuẩn hóa chuỗi</button>
+      </td>
+    </tr>
+  </table>
+  <script>
+    var str;
+    function DaoChuoi()
+    {
+      var out = document.getElementById('cbd')
+      str = out.value
+      var array = []
+      array = str.split(" ")
+      var result=" ";
+      for ( let i = array.length-1; i >= 0; i--)
+        result+=array[i]+" "
+      out.value = result.trim()
+    }
+    function ChuanHoa()
+    {
+      var out = document.getElementById('cbd')
+      str = out.value
+      var array = []
+      array = str.split(" ")
+      console.log(array)
+      var result = " "
+      for ( let i = 0; i < array.length; i++)
+      {
+        if ( array[i] === "") continue
+        result+=array[i].charAt(0).toUpperCase() + array[i].slice(1) + " "
+      }
+      out.value = result.trim()
+    }
+  </script>
+</body>
+</html>

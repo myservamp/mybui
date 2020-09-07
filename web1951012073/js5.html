@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS05</title>
+	<style>
+		table{
+			width: 100%;
+		}
+		table, td{
+			border: 1px solid;
+		}
+		h2{
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Bảng Cửu Chương</h2>
+	<p id="kq"></p>
+	<script>
+		var html = "<table>";
+		var row, col, i, j, step = 0;
+		for(row = 1; row <= 2; row++)
+		{
+			html += "<tr>";
+			for(col = 1; col <= 4; col ++)
+			{
+				html += "<td>";
+				i = col + 1 + step;
+				for(j = 1; j <= 9; j ++)
+				{
+					html += i + "x" + j+ "=" + i*j + "<br>";
+				}
+				html += "</td>";
+			}
+			step += 4;
+			html += "</tr>";
+		}
+		html += "</table>";
+		document.getElementById("kq").innerHTML=html;
+	</script>
+</body>
+</html>

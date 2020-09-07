@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 03</title>
+	<script>
+		function Tinh()
+		{
+			var a = parseInt(document.forms.myform["so1"].value);
+			var b = parseInt(document.forms.myform["so2"].value);
+			var op = document.forms.myform["op"].value;
+			var kq;
+			switch(op)
+			{
+				case "+": kq = a+b; break;
+				case "-": kq = a-b; break;
+				case "*": kq = a*b; break;
+				case "/":
+					if(b != 0)
+						kq = a/b;
+					else
+						kq = "Không thể thực hiện phép chia cho 0"
+					break;
+			}
+			document.forms.myform["kq"].value=kq;
+			return false;
+		}
+	</script>
+</head>
+
+<body>
+	<form id="myform" onSubmit="return Tinh()">
+		<table width="50%" border="1">
+			<tr>
+				<th colspan="2"><h2>CÁC PHÉP TÍNH SỐ HỌC</h2></th>
+			</tr>
+			<tr>
+				<td width="30%">Số thứ 1</td>
+				<td><input type="text" name="so1" value="5"></td>
+			</tr>
+			<tr>
+				<td width="30%">Số thứ 2</td>
+				<td><input type="text" name="so2" value="4"></td>
+			</tr>
+			<tr>
+				<td>Chọn phép toán</td>
+				<td>
+					<p>
+						<input type="radio" name="op" value="+">Cộng<br>
+						<input type="radio" name="op" value="-">Trừ<br>
+						<input type="radio" name="op" value="*">Nhân<br>
+						<input type="radio" name="op" value="/">Chia<br>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" name="btCong" value="Thực hiện">
+					<input type="reset" value="Huỷ">
+				</td>
+				<td><input type="text" name="kq" readonly /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

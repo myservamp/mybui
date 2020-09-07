@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 11</title>
+</head>
+
+<body>
+	<h2>THAY THẾ CHUỖI</h2>
+	<form>
+		<table>
+			<tr>
+				<td width="150px">Chuỗi ban đầu: </td>
+				<td><input type="text" id="chuoi">
+				</td>
+			</tr>
+			<tr>
+				<td>Chuỗi bị thay thế: </td>
+				<td><input type="text" id="cbtt"></td>
+			</tr>
+			<tr>
+				<td>Chuỗi thay thế: </td>
+				<td><input type="text" id="ctt"></td>
+			</tr>
+		</table>
+		<button type="button" onClick="ThayChuoi()">Thực hiện</button>
+	</form>
+	<script>
+		function ThayChuoi()
+		{
+			var s = document.getElementById("chuoi").value;
+			var s1 = document.getElementById("cbtt").value;
+			var s2 = document.getElementById("ctt").value;
+			var kq = s.replace(new RegExp(s1, 'g'),s2);
+			document.getElementById("chuoi").value=kq;
+		}
+	</script>
+</body>
+</html>

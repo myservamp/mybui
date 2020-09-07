@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS10</title>
+</head>
+<body>
+	 Nhập số phần tử: <input type="number" id="number">
+        <br>
+        <button type="button" onClick="TaoMang()">Tạo mảng</button>
+        <button type="button" onClick="MangTang()">Sắp xếp mảng tăng</button>
+        <button type="button" onClick="MangGiam()">Sắp xếp mảng giảm</button>
+        <p>
+			<div id="bd"></div>
+			<br>
+			<div id="mt"></div>
+			<br>
+			<div id="mg"></div>
+			<br>
+		</p>
+        <script>
+            var arr = new Array();
+            function TaoMang() {
+                var n = document.getElementById("number").value;
+                var output = "Mảng ban đầu: ";
+                for (var i = 0; i < n; i++) {
+                    arr[i] = Math.floor(Math.random() * 50);
+                    output += arr[i] + " ";
+                }
+                document.getElementById("bd").innerHTML = output;
+                return arr;
+            }
+            function MangTang() {
+                var n = document.getElementById("number").value;
+                var output = "Mảng tăng dần: ";
+                function compare(a, b) {
+                    return a - b;
+                }
+                arr.sort(compare);
+                for (var i = 0; i < n; i++) {
+                    output += arr[i] + " ";
+                }
+                document.getElementById("mt").innerHTML = output;
+            }
+            function MangGiam() {
+                var n = document.getElementById("number").value;
+                var output = "Mảng giảm dần: ";
+                function compare(a, b) {
+                    return b - a;
+                }
+                arr.sort(compare);
+                for (var i = 0; i < n; i++) {
+                    output += arr[i] + " ";
+                }
+                document.getElementById("mg").innerHTML = output;
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 15</title>
+	<style>
+		#box{
+			width: 800px;
+			height: 200px;
+			font-size: 50px;
+			text-align: center;
+			border: 2px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box"></div>
+	<span>
+		Nhập nội dung:
+		<input type="text" id="text">
+	</span>
+	<br>
+	<span>
+		Màu nền:
+		<input type="color" id="color">
+	</span>
+	<br>
+	<span>
+		Màu chữ:
+		<input type="color" id="color1">
+	</span>
+	<br>
+	<button onClick="TH()">Thực hiện</button>
+	<script>
+		function TH(){
+			var text = document.getElementById('text').value
+			var color = document.getElementById('color').value
+			var color1 = document.getElementById('color1').value
+			var box = document.getElementById('box')
+			
+			box.style.background = color
+			box.style.color = color1
+			box.innerHTML = text
+		}	
+	</script>
+</body>
+</html>

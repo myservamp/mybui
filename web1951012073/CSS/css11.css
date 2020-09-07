@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+div{border: 0px solid}
+.main{
+	background-color: gray;
+	margin-top: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.banner{
+	background-image: url("../Images/banner.jpg");
+	text-align: center;
+	padding-top: 12px;
+	color: yellow;
+	height:60px;
+	text-shadow: 3px 3px black;
+}
+.nar{
+	overflow: hidden;
+	background-color: blue;
+	height: 30px;
+}
+#menu{
+	margin-top: 2px;
+	text-align: center;
+	color: white;
+}
+#menu li{
+	list-style-type: none;
+	display: inline-block;
+	height: 25px;
+	margin-left: 5px;
+	margin-right: 10px;
+}
+#menu li:hover{
+	color: red;
+	background-color: aqua;
+	text-decoration: underline;
+}
+.left{
+	width: 200px;
+	background-color: darkgreen;
+	min-height: 500px;
+	float: left;
+}
+.left li{
+	padding-left: 3px;
+	color: white;
+	font-size: 15px;
+}
+.right{
+	width: 200px;
+	background-color: darkgreen;
+	min-height: 500px;
+	float: right;
+}
+#vqc{
+	float: right;
+	border-radius: 25px;
+	background-color: bisque;
+	padding:50px;
+	width: 80px;
+	height: 50px;
+	text-align: center;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.content{
+	overflow: auto;
+	height: 500px;
+}
+.divcontent{
+	float: left;width: 400px; height: 250px;border: 2px solid gray; text-align: center; padding: 5px; margin: 10px;
+	background-color: gray;
+}
+	#d1
+		{overflow: hidden}
+	#d2
+		{overflow: hidden;}
+	#d3
+		{overflow: hidden;}
+	#d4
+		{overflow: scroll;}
+.footer{
+	height: 30px;
+	background-color: cornflowerblue;
+	clear: both;
+	min-height: 30px;
+	text-align: center;
+	padding: 10px;
+	color: yellow;
+}
+
+
